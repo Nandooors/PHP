@@ -11,9 +11,124 @@
     <title>Formulario!</title>
   </head>
   <body>
+
     <div class="container">
       <?php require "includes/menu.php"; ?>
     <h1>Cadastro cliente!</h1>
+   
+    <form method="post" action="acao/acaocliente.php">
+
+    <div class="row"> <!-- nome  -->
+      <div class="col-md-12"> 
+      <div class="form-group">
+    <label for="exampleInputEmail1">Nome do cliente</label>
+    <input type="text" name="nome" class="form-control" placeholder="Seu nome">
+  </div>
+      </div>
+  </div>
+
+
+  <div class="row"> <!-- CPF -->
+      <div class="col-md-4"> 
+      <div class="form-group">
+    <label for="exampleInputEmail1">CPF</label>
+    <input type="text" name="cpf" class="form-control" placeholder="000.000.000.00">
+  </div>
+      </div>
+
+      <div class="col-md-4"> <!-- nascimento  -->
+      <div class="form-group">
+    <label for="exampleInputEmail1">Data de nascimento</label>
+    <input type="date" name="nascimento" class="form-control" placeholder="">
+  </div>
+    </div>
+
+      <div class="col-md-4"><!-- sexo  --> 
+            <div class="form-check" style="margin-top:20px">
+        <input class="form-check-input" type="radio" name="exampleRadios" value="masculino">
+        <label class="form-check-label" for="exampleRadios1"> Masculino
+        </label>
+
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" value="feminino">
+        <label class="form-check-label" for="exampleRadios2"> Feminino
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="row"> <!-- estado civil -->
+      <div class="col-md-6"> 
+      <div class="form-group">
+    <label for="exampleFormControlSelect1">Estado Civil</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>Solteiro</option>
+      <option>Casado</option>
+      <option>Namorando</option>
+      <option>Ficando Serio</option>
+      <option>Noitadas</option>
+    </select>
+  </div>
+  </div>
+
+      <div class="col-md-6"> <!-- renda mensal  --> 
+          <div class="form-group">
+        <label for="exampleInputEmail1">Renda mensal</label>
+        <input type="text" name="rendaMensal" class="form-control" placeholder="0,00">
+      </div>  
+    </div>
+  </div>
+
+  <h3>ENDEREÇO</h3>
+
+  <div class="row"> 
+      <div class="col-md-6"> <!-- logradouro  -->
+          <div class="form-group">
+        <label for="exampleInputEmail1">Logradouro</label>
+        <input type="text" name="logradouro" class="form-control" placeholder="Av. Paulista">
+      </div>  
+    </div>
+
+      <div class="col-md-3"> <!-- numero --> 
+          <div class="form-group">
+        <label for="exampleInputEmail1">Numero</label>
+        <input type="text" name="numero" class="form-control" placeholder="Nº">
+      </div>  
+    </div> 
+
+      <div class="col-md-3"> <!-- complemento  --> 
+      <div class="form-group">
+        <label for="exampleInputEmail1">Complemento</label>
+        <input type="text" name="complemento" class="form-control" placeholder="Casa, Apto, Loja">
+      </div> 
+    </div> 
+  </div>
+
+  <div class="row">
+  <div class="col-md-6"> <!-- estado -->
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Estado</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>Rio Grande do Sul</option>
+      <option>Sao Paulo</option>
+      <option>Minas Gerais</option>
+      <option>Mato Grosso</option>
+      <option>Rio de Janeiro</option>
+    </select>
+  </div>
+    </div>
+
+      <div class="col-md-6"> <!-- cidade  -->
+      <div class="form-group">
+        <label for="exampleInputEmail1">Cidade</label>
+        <input type="text" name="cidade" class="form-control" placeholder="Sao Paulo">
+      </div>   
+    </div>
+    <input type="submit" value="Enviar" name="enviar" style="margin-top:20px; margin-left:15px" class="btn btn-dark"></button>
+  </div>
+
+</form>
 
     <?php require "includes/rodape.php"; ?>
 </div>
